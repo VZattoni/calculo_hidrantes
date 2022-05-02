@@ -1,0 +1,27 @@
+Function Coluna_Dim(lin, col)
+
+If Worksheets("Planilha2").Cells(lin, col) = 15 Then          'Nomeando a coluna da tabela'
+    coluna_j_main = 15
+  ElseIf Worksheets("Planilha2").Cells(lin, col) = 20 Then
+    coluna_j_main = 16
+  ElseIf Worksheets("Planilha2").Cells(lin, col) = 25 Then
+    coluna_j_main = 17
+  ElseIf Worksheets("Planilha2").Cells(lin, col) = 32 Then
+    coluna_j_main = 18
+  ElseIf Worksheets("Planilha2").Cells(lin, col) = 40 Then
+    coluna_j_main = 19
+  ElseIf Worksheets("Planilha2").Cells(lin, col) = 50 Then
+    coluna_j_main = 20
+  ElseIf Worksheets("Planilha2").Cells(lin, col) = 65 Then
+    coluna_j_main = 21
+  ElseIf Worksheets("Planilha2").Cells(lin, col) = 75 Then
+    coluna_j_main = 22
+  ElseIf Worksheets("Planilha2").Cells(lin, col) = 100 Then
+    coluna_j_main = 23
+  ElseIf Worksheets("Planilha2").Cells(lin, col) = 125 Then
+    coluna_j_main = 24
+  ElseIf Worksheets("Planilha2").Cells(lin, col) = 150 Then
+    coluna_j_main = 25
+  End If
+  
+End Function

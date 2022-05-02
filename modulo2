@@ -1,0 +1,305 @@
+Sub Perda_de_Carga()
+
+'Célula o Material
+ 
+linha_m = 4
+coluna_m = 3
+
+'Célula do Tipo e Qntd do Joelho 45
+
+linha_j = 15
+coluna_j_tipo = 2
+coluna_j_qntd = 5
+coluna_diam_j = 4
+
+linha_j1 = 16
+coluna_j_tipo1 = 2
+coluna_j_qntd1 = 5
+coluna_diam_j1 = 4
+
+'Célula do Tipo e Qntd do Joelho 90
+
+linha_j_90 = 17
+coluna_j_tipo_90 = 2
+coluna_j_qntd_90 = 5
+coluna_diam_j_90 = 4
+
+linha_j_901 = 18
+coluna_j_tipo_901 = 2
+coluna_j_qntd_901 = 5
+coluna_diam_j_901 = 4
+
+'Célula do Tipo e Qntd da Curva
+
+linha_c = 19
+coluna_c = 2
+coluna_c_qntd = 5
+coluna_diam_c = 4
+
+linha_c1 = 20
+coluna_c1 = 2
+coluna_c_qntd1 = 5
+coluna_diam_c1 = 4
+
+'Célula do Tipo e Qntd do Tê PD
+
+linha_t_PD = 21
+coluna_t_PD = 2
+coluna_t_qntd_PD = 5
+coluna_diam_t_PD = 4
+
+linha_t_PD1 = 22
+coluna_t_PD1 = 2
+coluna_t_qntd_PD1 = 5
+coluna_diam_t_PD1 = 4
+
+'Célula do Tipo e Qntd do Tê SL
+
+linha_t_SL = 23
+coluna_t_SL = 2
+coluna_t_qntd_SL = 5
+coluna_diam_t_SL = 4
+
+linha_t_SL1 = 24
+coluna_t_SL1 = 2
+coluna_t_qntd_SL1 = 5
+coluna_diam_t_SL1 = 4
+
+
+'Joelho 45º
+
+coluna_j_main = Coluna_Dim(linha_j, coluna_diam_j)
+  
+ quantidade_joelho = Worksheets("Planilha2").Cells(linha_j, coluna_j_qntd)   'Recolhendo dado da quantidade
+  
+Select Case Worksheets("Planilha2").Cells(linha_m, coluna_m) 'Material
+   Case "   Ferro Galvanizado"
+             PC_Joelho = Worksheets("Tabelas").Cells(28, coluna_j_main)
+            Sum_PC_Joelho = quantidade_joelho * PC_Joelho   'PERDA DE CARGA TOTAL - JOELHOS  FG
+   Case Else
+             PC_Joelho = Worksheets("Tabelas").Cells(27, coluna_j_main)
+            Sum_PC_Joelho = quantidade_joelho * PC_Joelho   'PERDA DE CARGA TOTAL - JOELHOS COBRE
+End Select
+ 
+ Worksheets("Planilha2").Cells(linha_j, 7) = PC_Joelho
+
+
+
+
+'Joelho 45º 1
+
+coluna_j_main1 = Coluna_Dim(linha_j1, coluna_diam_j1)
+  
+ quantidade_joelho1 = Worksheets("Planilha2").Cells(linha_j1, coluna_j_qntd1)   'Recolhendo dado da quantidade
+  
+Select Case Worksheets("Planilha2").Cells(linha_m, coluna_m) 'Material
+   Case "   Ferro Galvanizado"
+             PC_Joelho1 = Worksheets("Tabelas").Cells(28, coluna_j_main1)
+            Sum_PC_Joelho1 = quantidade_joelho1 * PC_Joelho1   'PERDA DE CARGA TOTAL - JOELHOS  FG
+   Case Else
+             PC_Joelho1 = Worksheets("Tabelas").Cells(27, coluna_j_main1)
+            Sum_PC_Joelho1 = quantidade_joelho1 * PC_Joelho1   'PERDA DE CARGA TOTAL - JOELHOS COBRE
+End Select
+ 
+ Worksheets("Planilha2").Cells(linha_j1, 7) = PC_Joelho1
+ 
+ 
+ 
+ 
+'Joelho 90º
+
+coluna_j_main_90 = Coluna_Dim(linha_j_90, coluna_diam_j_90)
+   
+   quantidade_joelho_90 = Worksheets("Planilha2").Cells(linha_j_90, coluna_j_qntd_90)   'Recolhendo dado da quantidade
+  
+Select Case Worksheets("Planilha2").Cells(linha_m, coluna_m) 'Material
+   Case "   Ferro Galvanizado"
+             PC_Joelho_90 = Worksheets("Tabelas").Cells(26, coluna_j_main_90)
+            Sum_PC_Joelho_90 = quantidade_joelho_90 * PC_Joelho_90   'PERDA DE CARGA TOTAL - JOELHOS  FG
+   Case Else
+             PC_Joelho_90 = Worksheets("Tabelas").Cells(25, coluna_j_main_90)
+            Sum_PC_Joelho_90 = quantidade_joelho_90 * PC_Joelho_90   'PERDA DE CARGA TOTAL - JOELHOS COBRE
+End Select
+  
+  
+  Worksheets("Planilha2").Cells(linha_j_90, 7) = PC_Joelho_90
+
+
+
+
+'Joelho 90º 1
+
+coluna_j_main_901 = Coluna_Dim(linha_j_901, coluna_diam_j_901)
+   
+   quantidade_joelho_901 = Worksheets("Planilha2").Cells(linha_j_901, coluna_j_qntd_901)   'Recolhendo dado da quantidade
+  
+Select Case Worksheets("Planilha2").Cells(linha_m, coluna_m) 'Material
+   Case "   Ferro Galvanizado"
+             PC_Joelho_901 = Worksheets("Tabelas").Cells(26, coluna_j_main_901)
+            Sum_PC_Joelho_901 = quantidade_joelho_901 * PC_Joelho_901   'PERDA DE CARGA TOTAL - JOELHOS  FG
+   Case Else
+             PC_Joelho_901 = Worksheets("Tabelas").Cells(25, coluna_j_main_901)
+            Sum_PC_Joelho_901 = quantidade_joelho_901 * PC_Joelho_901   'PERDA DE CARGA TOTAL - JOELHOS COBRE
+End Select
+  
+  
+  Worksheets("Planilha2").Cells(linha_j_901, 7) = PC_Joelho_901
+
+
+
+
+'Curva 90
+
+
+coluna_c_main = Coluna_Dim(linha_c, coluna_diam_c)
+
+   quantidade_curva = Worksheets("Planilha2").Cells(linha_c, coluna_c_qntd)   'Recolhendo dado da quantidade
+  
+Select Case Worksheets("Planilha2").Cells(linha_m, coluna_m) 'Material
+   Case "   Ferro Galvanizado"
+             PC_Curva = Worksheets("Tabelas").Cells(30, coluna_c_main)
+            Sum_PC_Curva = quantidade_curva * PC_Curva   'PERDA DE CARGA TOTAL - Curva FG
+   Case Else
+             PC_Curva = Worksheets("Tabelas").Cells(29, coluna_c_main)
+            Sum_PC_Curva = quantidade_curva * PC_Curva   'PERDA DE CARGA TOTAL - Curva COBRE
+End Select
+
+ Worksheets("Planilha2").Cells(linha_c, 7) = PC_Curva
+ 
+ 
+ 
+ 
+ 'Curva 90 1
+
+
+coluna_c_main1 = Coluna_Dim(linha_c1, coluna_diam_c1)
+
+   quantidade_curva1 = Worksheets("Planilha2").Cells(linha_c1, coluna_c_qntd1)   'Recolhendo dado da quantidade
+  
+Select Case Worksheets("Planilha2").Cells(linha_m, coluna_m) 'Material
+   Case "   Ferro Galvanizado"
+             PC_Curva1 = Worksheets("Tabelas").Cells(30, coluna_c_main1)
+            Sum_PC_Curva1 = quantidade_curva1 * PC_Curva1   'PERDA DE CARGA TOTAL - Curva FG
+   Case Else
+             PC_Curva1 = Worksheets("Tabelas").Cells(29, coluna_c_main1)
+            Sum_PC_Curva1 = quantidade_curva1 * PC_Curva1   'PERDA DE CARGA TOTAL - Curva COBRE
+End Select
+
+ Worksheets("Planilha2").Cells(linha_c1, 7) = PC_Curva1
+
+
+
+
+
+'Tê Passagem direta
+
+  coluna_t_main_PD = Coluna_Dim(linha_t_PD, coluna_diam_t_PD)
+
+   quantidade_t_PD = Worksheets("Planilha2").Cells(linha_t_PD, coluna_t_qntd_PD)   'Recolhendo dado da quantidade
+  
+Select Case Worksheets("Planilha2").Cells(linha_m, coluna_m) 'Material
+   Case "   Ferro Galvanizado"
+             PC_t_PD = Worksheets("Tabelas").Cells(33, coluna_t_main_PD)
+            Sum_PC_t_PD = quantidade_t_PD * PC_t_PD   'PERDA DE CARGA TOTAL - Curva FG
+   Case Else
+             PC_t_PD = Worksheets("Tabelas").Cells(32, coluna_t_main_PD)
+            Sum_PC_t_PD = quantidade_t_PD * PC_t_PD   'PERDA DE CARGA TOTAL - Curva COBRE
+End Select
+
+ Worksheets("Planilha2").Cells(linha_t_PD, 7) = PC_t_PD
+ 
+ 
+ 'Tê Passagem direta 1
+
+  coluna_t_main_PD1 = Coluna_Dim(linha_t_PD1, coluna_diam_t_PD1)
+
+   quantidade_t_PD1 = Worksheets("Planilha2").Cells(linha_t_PD1, coluna_t_qntd_PD1)   'Recolhendo dado da quantidade
+  
+Select Case Worksheets("Planilha2").Cells(linha_m, coluna_m) 'Material
+   Case "   Ferro Galvanizado"
+             PC_t_PD1 = Worksheets("Tabelas").Cells(33, coluna_t_main_PD1)
+            Sum_PC_t_PD1 = quantidade_t_PD1 * PC_t_PD1   'PERDA DE CARGA TOTAL - Curva FG
+   Case Else
+             PC_t_PD1 = Worksheets("Tabelas").Cells(32, coluna_t_main_PD1)
+            Sum_PC_t_PD1 = quantidade_t_PD1 * PC_t_PD1   'PERDA DE CARGA TOTAL - Curva COBRE
+End Select
+
+ Worksheets("Planilha2").Cells(linha_t_PD1, 7) = PC_t_PD1
+
+
+'Tê Passagem Lateral
+
+
+coluna_t_main_SL = Coluna_Dim(linha_t_SL, coluna_diam_t_SL)
+
+   quantidade_t_SL = Worksheets("Planilha2").Cells(linha_t_SL, coluna_t_qntd_SL)   'Recolhendo dado da quantidade
+  
+Select Case Worksheets("Planilha2").Cells(linha_m, coluna_m) 'Material'
+   Case "   Ferro Galvanizado"
+             PC_t_SL = Worksheets("Tabelas").Cells(35, coluna_t_main_SL)
+            Sum_PC_t_SL = quantidade_t_SL * PC_t_SL   'PERDA DE CARGA TOTAL - Curva FG
+   Case Else
+             PC_t_SL = Worksheets("Tabelas").Cells(34, coluna_t_main_SL)
+            Sum_PC_t_SL = quantidade_t_SL * PC_t_SL   'PERDA DE CARGA TOTAL - Curva COBRE
+End Select
+
+Worksheets("Planilha2").Cells(linha_t_SL, 7) = PC_t_SL
+
+
+'Tê Passagem Lateral 1
+
+
+coluna_t_main_SL1 = Coluna_Dim(linha_t_SL1, coluna_diam_t_SL1)
+
+   quantidade_t_SL1 = Worksheets("Planilha2").Cells(linha_t_SL1, coluna_t_qntd_SL1)   'Recolhendo dado da quantidade
+  
+Select Case Worksheets("Planilha2").Cells(linha_m, coluna_m) 'Material'
+   Case "   Ferro Galvanizado"
+             PC_t_SL1 = Worksheets("Tabelas").Cells(35, coluna_t_main_SL1)
+            Sum_PC_t_SL1 = quantidade_t_SL1 * PC_t_SL1   'PERDA DE CARGA TOTAL - Curva FG
+   Case Else
+             PC_t_SL1 = Worksheets("Tabelas").Cells(34, coluna_t_main_SL1)
+            Sum_PC_t_SL1 = quantidade_t_SL1 * PC_t_SL1   'PERDA DE CARGA TOTAL - Curva COBRE
+End Select
+
+Worksheets("Planilha2").Cells(linha_t_SL1, 7) = PC_t_SL1
+
+'SOMA FINAL
+
+soma = Sum_PC_Joelho + Sum_PC_Joelho1 + Sum_PC_Joelho_90 + Sum_PC_Joelho_901 + Sum_PC_Curva + Sum_PC_Curva1 + Sum_PC_t_PD + Sum_PC_t_PD1 + Sum_PC_t_SL + Sum_PC_t_SL1
+Worksheets("Planilha2").Cells(27, 3) = soma
+
+End Sub
+
+Public Function Coluna_Dim(lin, col)
+
+Dim coluna_j_main As Integer
+
+Select Case Worksheets("Planilha2").Cells(lin, col)
+  Case 15
+    coluna_main = 15
+  Case 20
+    coluna_main = 16
+  Case 25
+    coluna_main = 17
+  Case 32
+    coluna_main = 18
+  Case 40
+    coluna_main = 19
+  Case 50
+    coluna_main = 20
+  Case 65
+    coluna_main = 21
+  Case 75
+    coluna_main = 22
+  Case 100
+    coluna_main = 23
+  Case 125
+    coluna_main = 24
+  Case 150
+    coluna_main = 25
+End Select
+
+Coluna_Dim = coluna_main
+
+End Function

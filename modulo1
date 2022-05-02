@@ -1,0 +1,821 @@
+
+Sub reserva()
+
+'Célula do Tipo do hid (Planilha2)'
+
+linha = 3
+coluna = 3
+
+'Célula da Área (Planilha2)'
+
+linhaA = 5
+colunaA = 3
+
+'Célula do Material (Planilha2)'
+
+linhaM = 4
+colunaM = 3
+
+'Célula do Reservatório (Planilha2)'
+
+linha_res = 8
+coluna_res = 3
+
+
+'Worksheets("Planilha2").Cells(8, 19) --> Célula Hpm'
+
+
+Select Case Worksheets("Planilha2").Cells(linha, coluna)
+
+Case 1
+
+
+    Formata_Tabela
+    Formata_Tabela2
+
+    Worksheets("Planilha1").Range("K5").Value = 100
+    
+    Worksheets("Planilha2").Range("C11").Interior.ColorIndex = 15
+    
+        If Worksheets("Planilha2").Range("C3").Value = 1 Then
+
+        Worksheets("Planilha2").Range("C11").Value = 25
+
+    End If
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+ 
+    With Worksheets("Planilha1").Range("A67").Borders(xlEdgeLeft)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("A67:H67").Borders(xlEdgeTop)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("A67:H67").Borders(xlEdgeBottom)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("H67").Borders(xlEdgeRight)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    
+
+    
+ ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+ 
+    With Worksheets("Planilha1").Range("B77:B86").Borders(xlEdgeLeft)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("B77").Borders(xlEdgeTop)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("B86").Borders(xlEdgeBottom)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("B77:B86").Borders(xlEdgeRight)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+ 
+ 
+ '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    
+
+   If Worksheets("Planilha2").Cells(linhaA, colunaA) <= 2500 Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(17, 3)
+   ElseIf (Worksheets("Planilha2").Cells(linhaA, colunaA) > 2500 And Worksheets("Planilha2").Cells(linhaA, colunaA) <= 5000) Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(17, 4)
+   ElseIf (Worksheets("Planilha2").Cells(linhaA, colunaA) > 5000 And Worksheets("Planilha2").Cells(linhaA, colunaA) <= 10000) Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(17, 5)
+   ElseIf (Worksheets("Planilha2").Cells(linhaA, colunaA) > 10000 And Worksheets("Planilha2").Cells(linhaA, colunaA) <= 20000) Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(17, 6)
+   ElseIf (Worksheets("Planilha2").Cells(linhaA, colunaA) > 20000 And Worksheets("Planilha2").Cells(linhaA, colunaA) <= 50000) Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(17, 7)
+   ElseIf Worksheets("Planilha2").Cells(linhaA, colunaA) > 50000 Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(17, 8)
+   End If
+   
+   Worksheets("Planilha2").Cells(9, 3) = 100
+   
+   
+   
+   
+   
+   
+Case 2
+
+
+    Formata_Tabela
+    Formata_Tabela2
+
+    Worksheets("Planilha1").Range("K5").Value = 150
+    
+    Worksheets("Planilha2").Range("C11").Interior.ColorIndex = 15
+    
+        If Worksheets("Planilha2").Range("C3").Value = 2 Then
+
+        Worksheets("Planilha2").Range("C11").Value = 40
+
+    End If
+
+ 
+ '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+ 
+    With Worksheets("Planilha1").Range("A68").Borders(xlEdgeLeft)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("A68:H68").Borders(xlEdgeTop)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("A68:H68").Borders(xlEdgeBottom)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("H68").Borders(xlEdgeRight)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    
+
+    
+ ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+ 
+    With Worksheets("Planilha1").Range("C77:C86").Borders(xlEdgeLeft)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("C77").Borders(xlEdgeTop)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("C86").Borders(xlEdgeBottom)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("C77:C86").Borders(xlEdgeRight)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+ 
+ 
+ '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    
+    
+   If Worksheets("Planilha2").Cells(linhaA, colunaA) <= 2500 Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(18, 3)
+   ElseIf (Worksheets("Planilha2").Cells(linhaA, colunaA) > 2500 And Worksheets("Planilha2").Cells(linhaA, colunaA) <= 5000) Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(18, 4)
+   ElseIf (Worksheets("Planilha2").Cells(linhaA, colunaA) > 5000 And Worksheets("Planilha2").Cells(linhaA, colunaA) <= 10000) Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(18, 5)
+   ElseIf (Worksheets("Planilha2").Cells(linhaA, colunaA) > 10000 And Worksheets("Planilha2").Cells(linhaA, colunaA) <= 20000) Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(18, 6)
+   ElseIf (Worksheets("Planilha2").Cells(linhaA, colunaA) > 20000 And Worksheets("Planilha2").Cells(linhaA, colunaA) <= 50000) Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(18, 7)
+   ElseIf Worksheets("Planilha2").Cells(linhaA, colunaA) > 50000 Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(18, 8)
+   End If
+   
+   Worksheets("Planilha2").Cells(9, 3) = 150
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+Case 3
+
+    Formata_Tabela
+    Formata_Tabela2
+
+    Worksheets("Planilha1").Range("K5").Value = 200
+    
+    
+    If Worksheets("Planilha2").Range("C3").Value = 3 Then
+
+        Worksheets("Planilha2").Range("C11").Value = 40
+
+    End If
+
+
+    Worksheets("Planilha2").Range("C11").Interior.ColorIndex = 15
+    
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+    With Worksheets("Planilha1").Range("A69").Borders(xlEdgeLeft)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("A69:H69").Borders(xlEdgeTop)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("A69:H69").Borders(xlEdgeBottom)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("H69").Borders(xlEdgeRight)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    
+    
+    
+ ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+ 
+    With Worksheets("Planilha1").Range("D77:D86").Borders(xlEdgeLeft)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("D77").Borders(xlEdgeTop)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("D86").Borders(xlEdgeBottom)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("D77:D86").Borders(xlEdgeRight)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+ 
+ 
+ '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    
+    
+ 
+   If Worksheets("Planilha2").Cells(linhaA, colunaA) <= 2500 Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(19, 3)
+   ElseIf (Worksheets("Planilha2").Cells(linhaA, colunaA) > 2500 And Worksheets("Planilha2").Cells(linhaA, colunaA) <= 5000) Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(19, 4)
+   ElseIf (Worksheets("Planilha2").Cells(linhaA, colunaA) > 5000 And Worksheets("Planilha2").Cells(linhaA, colunaA) <= 10000) Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(19, 5)
+   ElseIf (Worksheets("Planilha2").Cells(linhaA, colunaA) > 10000 And Worksheets("Planilha2").Cells(linhaA, colunaA) <= 20000) Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(19, 6)
+   ElseIf (Worksheets("Planilha2").Cells(linhaA, colunaA) > 20000 And Worksheets("Planilha2").Cells(linhaA, colunaA) <= 50000) Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(19, 7)
+   ElseIf Worksheets("Planilha2").Cells(linha, colunaA) > 50000 Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(19, 8)
+   End If
+   
+   Worksheets("Planilha2").Cells(9, 3) = 200
+   Worksheets("Planilha2").Cells(8, 19) = Worksheets("Tabelas").Cells(57, 34)
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+Case 4
+
+    Formata_Tabela
+    Formata_Tabela2
+    
+    Worksheets("Planilha1").Range("K5").Value = 300
+
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+  
+    Planilha2.Range("C11").Interior.ColorIndex = 40
+
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+    With Worksheets("Planilha1").Range("A70:A71").Borders(xlEdgeLeft)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("A70:H70").Borders(xlEdgeTop)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("A71:H71").Borders(xlEdgeBottom)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("H70:H71").Borders(xlEdgeRight)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+
+    
+ ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+ 
+    With Worksheets("Planilha1").Range("E77:E86").Borders(xlEdgeLeft)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("E77").Borders(xlEdgeTop)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("E86").Borders(xlEdgeBottom)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("E77:E86").Borders(xlEdgeRight)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+ 
+ 
+ '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    
+ 
+   If Worksheets("Planilha2").Cells(linhaA, colunaA) <= 2500 Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(20, 3)
+   ElseIf (Worksheets("Planilha2").Cells(linhaA, colunaA) > 2500 And Worksheets("Planilha2").Cells(linhaA, colunaA) <= 5000) Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(20, 4)
+   ElseIf (Worksheets("Planilha2").Cells(linhaA, colunaA) > 5000 And Worksheets("Planilha2").Cells(linhaA, colunaA) <= 10000) Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(20, 5)
+   ElseIf (Worksheets("Planilha2").Cells(linhaA, colunaA) > 10000 And Worksheets("Planilha2").Cells(linhaA, colunaA) <= 20000) Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(20, 6)
+   ElseIf (Worksheets("Planilha2").Cells(linhaA, colunaA) > 20000 And Worksheets("Planilha2").Cells(linhaA, colunaA) <= 50000) Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(20, 7)
+   ElseIf Worksheets("Planilha2").Cells(linhaA, colunaA) > 50000 Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(20, 8)
+   End If
+   
+   Worksheets("Planilha2").Cells(9, 3) = 300
+   Worksheets("Planilha2").Cells(8, 19) = Worksheets("Tabelas").Cells(59, 34)
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+Case 5
+
+
+    Formata_Tabela
+    Formata_Tabela2
+    Worksheets("Planilha1").Range("K5").Value = 600
+    
+    Worksheets("Planilha2").Range("C11").Interior.ColorIndex = 15
+    
+    If Worksheets("Planilha2").Range("C3").Value = 5 Then
+
+        Worksheets("Planilha2").Range("C11").Value = 65
+
+    End If
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+    With Worksheets("Planilha1").Range("A72").Borders(xlEdgeLeft)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("A72:H72").Borders(xlEdgeTop)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("A72:H72").Borders(xlEdgeBottom)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("H72").Borders(xlEdgeRight)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+ ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+ 
+    With Worksheets("Planilha1").Range("F77:F86").Borders(xlEdgeLeft)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("F77").Borders(xlEdgeTop)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("F86").Borders(xlEdgeBottom)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+    
+    With Worksheets("Planilha1").Range("F77:F86").Borders(xlEdgeRight)
+        .LineStyle = xlContinuous
+        .Weight = xlThick
+        .ColorIndex = 3
+    End With
+ 
+ 
+ ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+ 
+   If Worksheets("Planilha2").Cells(linhaA, colunaA) <= 2500 Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(21, 3)
+   ElseIf (Worksheets("Planilha2").Cells(linhaA, colunaA) > 2500 And Worksheets("Planilha2").Cells(linhaA, colunaA) <= 5000) Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(21, 4)
+   ElseIf (Worksheets("Planilha2").Cells(linhaA, colunaA) > 5000 And Worksheets("Planilha2").Cells(linhaA, colunaA) <= 10000) Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(21, 5)
+   ElseIf (Worksheets("Planilha2").Cells(linhaA, colunaA) > 10000 And Worksheets("Planilha2").Cells(linhaA, colunaA) <= 20000) Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(21, 6)
+   ElseIf (Worksheets("Planilha2").Cells(linhaA, colunaA) > 20000 And Worksheets("Planilha2").Cells(linhaA, colunaA) <= 50000) Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(21, 7)
+   ElseIf Worksheets("Planilha2").Cells(linhaA, colunaA) > 50000 Then
+       Worksheets("Planilha2").Cells(linha_res, coluna_res) = Worksheets("Tabelas").Cells(20, 8)
+   End If
+   
+   Worksheets("Planilha2").Cells(9, 3) = 600
+   Worksheets("Planilha2").Cells(8, 19) = Worksheets("Tabelas").Cells(62, 35)
+   
+End Select
+
+
+Dim conv
+Dim vazao As String
+Dim k As String
+Dim vazao1 As String
+Dim Dc1 As String
+Dim Dm As String
+Dim pi As String
+Dim conv1
+Dim Vv As String
+Dim tmp
+Dim tmp1
+Dim tmp2
+Dim tmp3
+Dim hpc As String
+Dim hpm As String
+Dim hpv As String
+Dim hpesg As String
+Dim sum As String
+Dim hpa As String
+Dim ph As String
+Dim vazao2
+Dim vazao3 As String
+Dim conexoes As String
+
+Dim P As String
+Dim Hg As String
+Dim Hpri As String
+Dim Hpma As String
+
+Dim P_aux As String
+Dim Hg_aux As String
+Dim Hpri_aux As String
+Dim Hpma_aux As String
+
+conv = Worksheets("Planilha2").Range("c10").Value 'Convertendo a variavel para int para poder usand Round()
+
+conexoes = Worksheets("Planilha2").Range("G27").Value
+vazao = Worksheets("Planilha1").Range("K5").Value
+k = Worksheets("Planilha1").Range("P34").Value
+vazao1 = Round(conv, 4)
+Dc1 = Worksheets("Planilha2").Range("C2").Value / 1000
+Dm = Worksheets("Planilha2").Range("c11").Value
+pi = Worksheets("Tabelas").Range("M4").Value
+conv1 = Worksheets("Planilha1").Range("J65").Value
+Vv = Round(conv1, 2)
+tmp = Worksheets("Planilha1").Range("J57").Value
+hpc = Round(tmp, 3)
+hpm = Worksheets("Planilha1").Range("J59").Value
+tmp1 = Worksheets("Planilha1").Range("N64").Value
+hpv = Round(tmp1, 2)
+hpesg = Worksheets("Planilha1").Range("J68").Value
+sum = "+"
+tmp2 = Worksheets("Planilha1").Range("K72").Value
+hpa = Round(tmp2, 2)
+tmp3 = Worksheets("Planilha1").Range("N36").Value
+ph = Round(tmp3, 2)
+vazao2 = conv * 2
+vazao3 = Round(vazao2, 4)
+
+P_aux = Worksheets("Planilha2").Range("R20").Value
+Hg_aux = Worksheets("Planilha2").Range("C6").Value
+Hpri_aux = Worksheets("Planilha2").Range("X5").Value
+Hpma_aux = Worksheets("Planilha2").Range("X7").Value
+
+P = Round(P_aux, 2)
+Hg = Round(Hg_aux, 2)
+Hpri = Round(Hpri_aux, 2)
+Hpma = Round(Hpma_aux, 2)
+
+
+Worksheets("Planilha1").Range("J36").Value = "'" & "= (" + vazao + ")² / (" + k + ")²"
+
+Worksheets("Planilha1").Range("J56").Value = "'" & "HPc = 10,65 x " + vazao1 + "^(" + "1,85" + ") " + "x 2,5 x 130^(-1,85) x " + Dc1 + "^(-4,87)"
+
+Worksheets("Planilha1").Range("L59").Value = "'" & "(Valor tabelado para o diâmetro de " + Dm + "mm com vazão de " + vazao + " LPM)"
+
+Worksheets("Planilha1").Range("J64").Value = "'" & "Vv = (" + vazao1 + " x 4) / (" + pi + " x " + Dc1 + "²)"
+
+Worksheets("Planilha1").Range("N63").Value = "'" & "HPv = 5 x (" + Vv + ")² / 2 x 9,81"
+
+Worksheets("Planilha1").Range("K71").Value = "'" & hpc + " " + sum + " " + hpv + " " + sum + " " + hpm + " " + sum + " " + hpesg
+
+Worksheets("Planilha1").Range("J77").Value = "'" & "P = " + ph + " mca " + sum + " " + hpa + " mca"
+
+Worksheets("Planilha1").Range("J84").Value = "'" & "Qcl = 2 x " + vazao
+
+Worksheets("Planilha1").Range("J92").Value = "'" & "Hp = (10,65 x " + vazao3 + "^(1,85) x 2,5) / (130^(1,85) x " + Dc1 + "^(4,87))"
+
+Worksheets("Planilha1").Range("S3").Value = "'" & "Hp = (10,65 x " + vazao3 + "^(1,85) x " + conexoes + ") / (130^(1,85) x " + Dc1 + "^(4,87))"
+
+Worksheets("Planilha1").Range("S8").Value = "'" & "H = " + P + " + " + Hg + " + " + Hpri + " + " + Hpma
+
+End Sub
+
+Public Function Formata_Tabela()
+
+
+
+    With Worksheets("Planilha1").Range("C65:E66").Borders()
+    
+        .LineStyle = xlContinuous
+        .Weight = xlThin
+        .ColorIndex = 1
+        
+    End With
+
+
+    With Worksheets("Planilha1").Range("A67:H72").Borders()
+    
+        .LineStyle = xlContinuous
+        .Weight = xlThin
+        .ColorIndex = 1
+        
+    End With
+
+
+    With Worksheets("Planilha1").Range("A64:H64").Borders()
+    
+        .LineStyle = xlContinuous
+        .Weight = xlThin
+        .ColorIndex = 1
+        
+    End With
+
+
+    With Worksheets("Planilha1").Range("A64:H64").Borders(xlEdgeTop)
+    
+        .LineStyle = xlContinuous
+        .Weight = xlMedium
+        .ColorIndex = 1
+        
+    End With
+    
+    
+    With Worksheets("Planilha1").Range("A64:A72").Borders(xlEdgeLeft)
+    
+        .LineStyle = xlContinuous
+        .Weight = xlMedium
+        .ColorIndex = 1
+        
+    End With
+    
+    
+    With Worksheets("Planilha1").Range("H64:H72").Borders(xlEdgeRight)
+    
+        .LineStyle = xlContinuous
+        .Weight = xlMedium
+        .ColorIndex = 1
+        
+    End With
+    
+    
+    With Worksheets("Planilha1").Range("A72:H72").Borders(xlEdgeBottom)
+    
+        .LineStyle = xlContinuous
+        .Weight = xlMedium
+        .ColorIndex = 1
+        
+    End With
+    
+    
+    With Worksheets("Planilha1").Range("A66:H66").Borders(xlEdgeBottom)
+    
+        .LineStyle = xlContinuous
+        .Weight = xlMedium
+        .ColorIndex = 1
+        
+    End With
+    
+    
+    With Worksheets("Planilha1").Range("A64:A66").Borders(xlEdgeRight)
+    
+        .LineStyle = xlContinuous
+        .Weight = xlMedium
+        .ColorIndex = 1
+        
+    End With
+    
+    
+    With Worksheets("Planilha1").Range("B64:B66").Borders(xlEdgeRight)
+    
+        .LineStyle = xlContinuous
+        .Weight = xlMedium
+        .ColorIndex = 1
+        
+    End With
+    
+    
+    With Worksheets("Planilha1").Range("E64:E66").Borders(xlEdgeRight)
+    
+        .LineStyle = xlContinuous
+        .Weight = xlMedium
+        .ColorIndex = 1
+        
+    End With
+    
+    
+    With Worksheets("Planilha1").Range("F64:F66").Borders(xlEdgeRight)
+    
+        .LineStyle = xlContinuous
+        .Weight = xlMedium
+        .ColorIndex = 1
+        
+    End With
+    
+    
+    With Worksheets("Planilha1").Range("G64:G66").Borders(xlEdgeRight)
+    
+        .LineStyle = xlContinuous
+        .Weight = xlMedium
+        .ColorIndex = 1
+        
+    End With
+    
+
+
+End Function
+
+
+
+
+Public Function Formata_Tabela2()
+
+
+    With Worksheets("Planilha1").Range("A76:F86").Borders()
+    
+        .LineStyle = xlContinuous
+        .Weight = xlThin
+        .ColorIndex = 1
+        
+    End With
+    
+    
+    With Worksheets("Planilha1").Range("A76:F76").Borders(xlEdgeTop)
+    
+        .LineStyle = xlContinuous
+        .Weight = xlMedium
+        .ColorIndex = 1
+        
+    End With
+    
+    
+    With Worksheets("Planilha1").Range("A76:F86").Borders(xlEdgeRight)
+    
+        .LineStyle = xlContinuous
+        .Weight = xlMedium
+        .ColorIndex = 1
+        
+    End With
+    
+    
+    With Worksheets("Planilha1").Range("A76:F86").Borders(xlEdgeRight)
+    
+        .LineStyle = xlContinuous
+        .Weight = xlMedium
+        .ColorIndex = 1
+        
+    End With
+    
+    
+    
+    With Worksheets("Planilha1").Range("A76:A86").Borders(xlEdgeRight)
+    
+        .LineStyle = xlContinuous
+        .Weight = xlMedium
+        .ColorIndex = 1
+        
+    End With
+    
+    
+    With Worksheets("Planilha1").Range("A76:F86").Borders(xlEdgeLeft)
+    
+        .LineStyle = xlContinuous
+        .Weight = xlMedium
+        .ColorIndex = 1
+        
+    End With
+    
+    
+    With Worksheets("Planilha1").Range("A76:F86").Borders(xlEdgeBottom)
+    
+        .LineStyle = xlContinuous
+        .Weight = xlMedium
+        .ColorIndex = 1
+        
+    End With
+    
+    
+    
+    With Worksheets("Planilha1").Range("A76:F77").Borders(xlEdgeBottom)
+    
+        .LineStyle = xlContinuous
+        .Weight = xlMedium
+        .ColorIndex = 1
+        
+    End With
+
+
+
+End Function
